@@ -136,6 +136,7 @@ Pretty-printed JSON:
   - Termux (Android)
   - Debian / Ubuntu / Alpine
   - Any POSIX-compliant Linux shell
+  - Any terminal XTerm-256colors or XTerm-truecolor
 
 - Requires:
   - `bash`
