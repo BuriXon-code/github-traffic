@@ -192,7 +192,7 @@ stop_spinner() {
 	tput cnorm
 }
 
-trap 'tput cnorm; echo -e "\rAborted.\e[K"; kill -9 $SPINNER_PID; exit 1' INT
+trap 'tput cnorm; echo -e "\rAborted.\e[K"; kill -9 $SPINNER_PID &>/dev/null; exit 1' INT
 show_spinner & SPINNER_PID=$!
 
 repos=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
